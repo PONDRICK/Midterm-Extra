@@ -1,10 +1,10 @@
 import { View,Text,Image,StyleSheet} from "react-native";
 const Imageset =({ImageSource,imagesize,title="",nisitid="",sample,description}) =>{
     return(
-        <View style={styles.container}>
+        <View style={styles.imageContainer}>
             <Image 
                 source={ImageSource}
-                style ={[styles.imageContainer,imagesize]}
+                style ={imagesize}
             />
             <Text style = {styles.imgTitle}>{title}</Text>
             <Text style = {styles.imgSubTitle}>{nisitid}</Text>

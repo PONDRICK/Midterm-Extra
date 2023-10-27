@@ -1,15 +1,16 @@
-import { View, StyleSheet ,Button} from "react-native";
+import { View, StyleSheet, Button, TouchableOpacity,Text } from "react-native";
 import Imageset from "../component/ImageSet";
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Imageset ImageSource ={require("../img/POND.png")} imagesize={styles.image} title="Sorrawit Nuernuam" nisitid="6421604927"/>
-            <Imageset ImageSource={{uri:"https://www.sciencealert.com/images/2023/07/HumanoidRobotPortrait2.jpg"}}imagesize={styles.image} title="Javis Nuernuam" nisitid="6421604927"/>
-            <Button 
-                title="Let's get started" 
-                color="#F3B562"
-                fontSize= "16"
-                onPress={()=> navigation.navigate("List")}/>
+            <Imageset ImageSource={require("../img/POND.png")} imagesize={styles.image} title="Sorrawit Nuernuam" nisitid="6421604927" />
+            <Imageset ImageSource={{ uri: "https://www.sciencealert.com/images/2023/07/HumanoidRobotPortrait2.jpg" }} imagesize={styles.image} title="Javis Nuernuam" nisitid="6421604927" />
+            <TouchableOpacity
+                style={styles.btnView}
+                onPress={() => navigation.navigate('List')}
+            >
+                <Text style={styles.btnTitle}>Let's get started</Text>
+            </TouchableOpacity>
         </View>
     );
 };
